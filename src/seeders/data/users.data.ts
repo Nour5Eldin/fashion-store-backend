@@ -1,0 +1,46 @@
+export const usersData = [
+  {
+    name: "Store Admin",
+    mobile: "+201000000000",
+    email: "admin@fashionstore.com",
+    password: "Admin@1234",
+    gender: "male",
+    role: "admin",
+    emailConsent: false,
+    isActive: true,
+    avatar: "https://ui-avatars.com/api/?name=Store+Admin&background=1E3A8A&color=fff&size=400",
+
+  },
+  {
+    name: "Ahmed Hassan",
+    mobile: "+201111111111",
+    email: "ahmed@example.com",
+    password: "User@1234",
+    gender: "male",
+    role: "user",
+    emailConsent: true,
+    isActive: true,
+    avatar: "https://ui-avatars.com/api/?name=Ahmed+Hassan&background=1E3A8A&color=fff&size=400",
+
+  },
+  {
+    name: "Yasmin Mohamed",
+    mobile: "+201222222222",
+    email: "yasmin@example.com",
+    password: "User@1234",
+    gender: "female",
+    role: "user",
+    emailConsent: false,
+    isActive: true,
+  },
+  {
+    name: "Omar Khaled",
+    mobile: "+201333333333",
+    email: "omar@example.com",
+    password: "User@1234",
+    gender: "male",
+    role: "user",
+    emailConsent: true,
+    isActive: true,
+  },
+];

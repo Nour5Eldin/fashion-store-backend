@@ -1,0 +1,11 @@
+export { userRepository } from "./user.repository";
+export { productRepository } from "./product.repository";
+export { cartRepository } from "./cart.repository";
+export { orderRepository } from "./order.repository";
+export { categoryRepository } from "./category.repository";
+export { subcategoryRepository } from "./subcategory.repository"
+export { testimonialRepository } from "./testimonial.repository";
+export { addressRepository } from "./address.repository";
+export { reviewRepository } from "./review.repository";
+export { homeSlideRepository } from "./home-slide.repository";
+export { siteConfigRepository } from "./site-config.repository";

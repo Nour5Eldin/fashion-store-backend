@@ -1,0 +1,9 @@
+export { authController } from "./auth.controller";
+export { productController } from "./product.controller";
+export { cartController } from "./cart.controller";
+export { orderController } from "./order.controller";
+export { addressController } from "./address.controller";
+export { testimonialController } from "./testimonial.controller";
+export { categoryController } from "./category.controller";
+export { reviewController } from "./review.controller";
+export { contentController } from "./content.controller";
