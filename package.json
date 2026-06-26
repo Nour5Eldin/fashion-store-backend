@@ -1,6 +1,12 @@
 {
   "name": "fashion-store-backend",
   "version": "1.0.0",
+  "builds": [
+    {
+      "src": "dist/app.js",
+      "use": "@vercel/node"
+    }
+  ],
   "description": "",
   "main": "index.js",
   "scripts": {
