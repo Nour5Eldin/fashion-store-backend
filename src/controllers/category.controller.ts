@@ -78,6 +78,14 @@ export class CategoryController {
         );
         res.status(200).json(ApiResponse.ok(subcategories));
     });
+
+    getAdminSubcategories = asyncHandler(async (req: Request, res: Response) => {
+        const result = await subcategoryRepository.paginate(
+            {},
+            { sort: { createdAt: -1 }, page: Number(req.query.page || 1), limit: Number(req.query.limit || 100) }
+        );
+        res.status(200).json(ApiResponse.ok(result));
+    });
     createSubcategory = asyncHandler(async (req: Request, res: Response) => {
         const subcategory = await subcategoryRepository.create(req.body);
         res.status(201).json(

@@ -29,6 +29,7 @@ router.delete("/categories/:id", categoryController.deleteCategory);
 router.patch("/categories/:id/toggle-active", categoryController.toggleActive);
 
 // ─── Subcategories ────────────────────────────────────────────────────────────
+router.get("/subcategories", categoryController.getAdminSubcategories);
 router.post("/subcategories", validate(createSubcategorySchema), categoryController.createSubcategory);
 router.patch("/subcategories/:id", validate(updateSubcategorySchema), categoryController.updateSubcategory);
 router.delete("/subcategories/:id", categoryController.deleteSubcategory);
