@@ -23,7 +23,9 @@ const app: Application = express();
 
 app.use(helmet());
 app.use(cors({
-    origin: process.env.CLIENT_URL || "http://localhost:4200",
+    origin: [process.env.CLIENT_URL || "",
+        "http://localhost:4200",
+        /\.vercel\.app$/],
     credentials: true,
 }));
 
@@ -46,6 +48,24 @@ app.get("/api/v1/health", (_req, res) => {
         status: "healthy",
         store: env.store.name,
         timestamp: new Date().toISOString(),
+    }));
+});
+
+app.get("/", (_req: Request, res: Response) => {
+    res.json(ApiResponse.ok({
+        message: "Fashion Store API is running smoothly 🚀",
+        store: env.store.name,
+    }));
+});
+
+app.get("/api/v1", (_req: Request, res: Response) => {
+    res.json(ApiResponse.ok({
+        message: "Welcome to Fashion Store API v1",
+        endpoints: {
+            health: "/api/v1/health",
+            products: "/api/v1/products",
+            categories: "/api/v1/categories",
+        },
     }));
 });
 

@@ -21,8 +21,8 @@ const options: swaggerJsdoc.Options = {
                 description: "Development Server",
             },
             {
-                url: "https://your-production-domain.com/api/v1",
-                description: "Production Server",
+                url: "https://fashion-store-backend-beige.vercel.app/api/v1",
+                description: "Production Server (Vercel)",
             },
         ],
         components: {
@@ -332,7 +332,7 @@ const options: swaggerJsdoc.Options = {
             { name: "Admin", description: "Admin Panel Operations" },
         ],
     },
-    apis: ["./src/routes/*.ts"], // ← بيقرأ الـ JSDoc comments من الـ routes
+    apis: ["./src/routes/*.ts", "./dist/routes/*.js", "./routes/*.js"], // ← بيقرأ الـ JSDoc comments من الـ routes
 };
 
 export const swaggerSpec = swaggerJsdoc(options);
